@@ -25,6 +25,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.todoTable.reloadData()
     }
     
+    @IBAction func touchResetButton(_ sender: Any) {
+        let realm = try! Realm()
+        try! realm.write {
+            realm.deleteAll()
+        }
+        self.todoTable.reloadData()
+        
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.todoList.count
     }

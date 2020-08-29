@@ -53,12 +53,22 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q2j-ck-ARe">
-                                <rect key="frame" x="187" y="130" width="41" height="36"/>
+                                <rect key="frame" x="113" y="128" width="41" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="追加"/>
                                 <connections>
                                     <action selector="touchAddButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ash-DB-FHd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSG-d2-UH5">
+                                <rect key="frame" x="225" y="128" width="82" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="リセット"/>
+                                <connections>
+                                    <action selector="touchAddButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Ie-9U-UN3"/>
+                                    <action selector="touchResetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z4P-a3-isz"/>
                                 </connections>
                             </button>
                         </subviews>
