@@ -31,12 +31,6 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.navigationController?.pushViewController(nextView, animated: true)
     }
     
-    @IBAction func touchAddButton(_ sender: Any) {
-        let storyboard = self.storyboard!
-        let nextView = storyboard.instantiateViewController(withIdentifier: "CreateView")
-        self.navigationController?.pushViewController(nextView, animated: true)
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.todoList.count
     }
@@ -46,5 +40,11 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         let todo: TodoModel = self.todoList[(indexPath as NSIndexPath).row]
         cell.todoLabel.text = todo.memo
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = self.storyboard!
+        let nextView = storyboard.instantiateViewController(withIdentifier: "DetailView") as! DetailViewController
+        self.navigationController?.pushViewController(nextView, animated: true)
     }
 }

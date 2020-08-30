@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8453565B24FAA2B3009A937E /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8453565A24FAA2B3009A937E /* CreateViewController.swift */; };
+		8453565D24FBB2B1009A937E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8453565C24FBB2B1009A937E /* DetailViewController.swift */; };
 		848CC04624FA2A9C00749998 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC04524FA2A9C00749998 /* AppDelegate.swift */; };
 		848CC04824FA2A9C00749998 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC04724FA2A9C00749998 /* SceneDelegate.swift */; };
 		848CC04A24FA2A9C00749998 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC04924FA2A9C00749998 /* ListViewController.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		8453565A24FAA2B3009A937E /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
+		8453565C24FBB2B1009A937E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		848CC04224FA2A9C00749998 /* RealmTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		848CC04524FA2A9C00749998 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		848CC04724FA2A9C00749998 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				848CC04B24FA2A9C00749998 /* Main.storyboard */,
 				848CC04924FA2A9C00749998 /* ListViewController.swift */,
 				8453565A24FAA2B3009A937E /* CreateViewController.swift */,
+				8453565C24FBB2B1009A937E /* DetailViewController.swift */,
 				848CC06424FA3BB600749998 /* TodoModel.swift */,
 				848CC06624FA445200749998 /* TodoCell.swift */,
 				848CC04E24FA2A9D00749998 /* Assets.xcassets */,
@@ -210,6 +213,7 @@
 				848CC04624FA2A9C00749998 /* AppDelegate.swift in Sources */,
 				848CC06724FA445200749998 /* TodoCell.swift in Sources */,
 				848CC04824FA2A9C00749998 /* SceneDelegate.swift in Sources */,
+				8453565D24FBB2B1009A937E /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
