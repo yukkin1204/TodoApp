@@ -15,20 +15,11 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         let backBarButtonItem = UIBarButtonItem()
         backBarButtonItem.title = "一覧"
         self.navigationItem.backBarButtonItem = backBarButtonItem
-        
-        let addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addBarButtonTapped(_:)))
-        self.navigationItem.rightBarButtonItems = [addBarButtonItem]
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(false)
         self.todoTable.reloadData()
-    }
-
-    @objc func addBarButtonTapped(_ sender: UIBarButtonItem) {
-        let storyboard = self.storyboard!
-        let nextView = storyboard.instantiateViewController(withIdentifier: "CreateView")
-        self.navigationController?.pushViewController(nextView, animated: true)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -45,6 +36,8 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = self.storyboard!
         let nextView = storyboard.instantiateViewController(withIdentifier: "DetailView") as! DetailViewController
+        nextView.id = todoList[indexPath.row].id
         self.navigationController?.pushViewController(nextView, animated: true)
     }
 }
+

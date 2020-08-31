@@ -50,7 +50,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Todo一覧" id="SdA-sR-OPx"/>
+                    <navigationItem key="navigationItem" title="Todo一覧" id="SdA-sR-OPx">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="1eh-I5-nRB">
+                            <connections>
+                                <segue destination="oIX-29-Xae" kind="show" id="wTV-j8-FN6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="todoTable" destination="8eZ-vb-9vR" id="LAW-Qy-G9Z"/>
                     </connections>
@@ -74,10 +80,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3b4-fJ-Yld">
+                                <rect key="frame" x="192" y="227" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="削除"/>
+                                <connections>
+                                    <action selector="touchDeleteButton:" destination="vdC-tg-axL" eventType="touchUpInside" id="HP2-yI-wHf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="WNZ-dx-IAC"/>
                     </view>
+                    <navigationItem key="navigationItem" title="詳細" id="qtl-zI-u3a"/>
+                    <connections>
+                        <outlet property="todoLabel" destination="c3G-6n-gwA" id="Kwx-3g-RVe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UhN-lU-99j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -110,7 +128,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="qO8-0w-eRX"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Jem-Jv-CYd"/>
+                    <navigationItem key="navigationItem" title="新規作成" id="Jem-Jv-CYd"/>
                     <connections>
                         <outlet property="todoTextField" destination="RDJ-Sp-gC4" id="taA-N5-jhi"/>
                     </connections>
@@ -138,4 +156,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+    </resources>
 </document>
