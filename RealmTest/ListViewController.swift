@@ -10,7 +10,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         
         let realm = try! Realm()
-        self.todoList = realm.objects(TodoModel.self)
+        self.todoList = realm.objects(TodoModel.self).sorted(byKeyPath: "date", ascending: true)
         
         let backBarButtonItem = UIBarButtonItem()
         backBarButtonItem.title = "一覧"
