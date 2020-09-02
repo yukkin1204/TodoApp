@@ -22,6 +22,13 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.todoTable.reloadData()
     }
     
+    @IBAction func touchPlusButton(_ sender: Any) {
+        let storyboard = self.storyboard!
+        let nextView = storyboard.instantiateViewController(withIdentifier: "CreateView")
+        self.navigationController?.pushViewController(nextView, animated: true)
+    }
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.todoList.count
     }
