@@ -7,13 +7,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         var config = Realm.Configuration()
         config.migrationBlock = { migration, oldSchemaVersion in
-            if oldSchemaVersion < 3 {
+            if oldSchemaVersion < 4 {
                 migration.enumerateObjects(ofType: TodoModel.className()) { (oldObject, newObject) in
-                    newObject!["id"] = NSUUID().uuidString
+                    newObject!["importance"] = "低"
                 }
             }
         }
-        config.schemaVersion = 3
+        config.schemaVersion = 4
         Realm.Configuration.defaultConfiguration = config
         return true
     }

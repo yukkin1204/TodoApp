@@ -4,12 +4,21 @@ import RealmSwift
 class CreateViewController: UIViewController {
 
     @IBOutlet weak var todoTextField: UITextField!
+    @IBOutlet weak var importanceControl: UISegmentedControl!
+    
+    var importance = "低"
     
     var alertController: UIAlertController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    @IBAction func importanceChanged(_ sender: Any) {
+        let selectedIndex = importanceControl.selectedSegmentIndex
+        importance = importanceControl.titleForSegment(at: selectedIndex)!
+    }
+    
     
     @IBAction func touchCreateButton(_ sender: Any) {
         if todoTextField.text!.isEmpty{
@@ -20,6 +29,7 @@ class CreateViewController: UIViewController {
             let realm = try! Realm()
             let todo: TodoModel = TodoModel()
             todo.memo = self.todoTextField.text
+            todo.importance = importance
             try! realm.write {
                realm.add(todo)
             }
