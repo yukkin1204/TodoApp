@@ -7,7 +7,6 @@ class CreateViewController: UIViewController {
     @IBOutlet weak var importanceControl: UISegmentedControl!
     
     var importance = "低"
-    
     var alertController: UIAlertController!
     
     override func viewDidLoad() {

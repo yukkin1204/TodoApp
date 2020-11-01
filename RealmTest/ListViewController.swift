@@ -37,12 +37,12 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TodoCell
         let todo: TodoModel = self.todoList[(indexPath as NSIndexPath).row]
         cell.todoLabel.text = todo.memo
-        if todo.importance == "中"{
-            cell.backgroundColor = UIColor.yellow
-        }else if todo.importance == "高"{
-            cell.backgroundColor = UIColor.orange
+        if todo.importance == "低"{
+            cell.importanceView.backgroundColor = UIColor(named: "lowImportanceColor")
+        }else if todo.importance == "中"{
+            cell.importanceView.backgroundColor = UIColor(named: "middleImportanceColor")
         }else{
-            cell.backgroundColor = UIColor.red
+            cell.importanceView.backgroundColor = UIColor(named: "highImportanceColor")
         }
         return cell
     }
